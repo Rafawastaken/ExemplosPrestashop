@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>mybasicmodule</name>
+    <displayName><![CDATA[My Basic Module]]></displayName>
+    <version><![CDATA[1.0]]></version>
+    <description><![CDATA[First module of the course]]></description>
+    <author><![CDATA[Rafael Pimenta]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+	<confirmUninstall><![CDATA[Please dont db :c]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>
