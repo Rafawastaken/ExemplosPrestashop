@@ -21,9 +21,30 @@ class ControlModules extends Module implements WidgetInterface
     $this->description = "Modulo para aprender sobre contralodres PS";
   }
 
+  public function install()
+  {
+    return parent::install() &&
+      $this->registerHook("moduleRoutes");
+  }
+
+  public function hookModuleRoutes($params)
+  {
+    return [
+      "test" => [
+        "controller" => "test",
+        "rule" => "front-controller-test",
+        "keywords" => [],
+        "params" => [
+          "module" => $this->name,
+          "fc" => 'module',
+          "controller" => "test"
+        ],
+      ],
+    ];
+  }
+
   public function renderWidget($hookName, array $configuration)
   {
-
     echo $this->context->link->getModuleLink($this->name, "test");
   }
 
